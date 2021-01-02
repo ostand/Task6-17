@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.ROOT);
         double x = readDouble('x');
-        x = checkCondition(x);
+        x = checkBelongingToTheRange(x);
         int n = readN();
         double e = readDouble('e');
 
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("Error! X must belong to the range (-1; 1). Try again!");
     }
 
-    static double checkCondition(double x) {
+    static double checkBelongingToTheRange(double x) {
         while (x <= -1 || x >= 1) {
             printErrorCheckResult();
             x = readDouble('x');
